@@ -69,6 +69,9 @@ span {
 }
 .image-container {
   position: relative;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 .deepika1 {
   width: 100%;
@@ -673,34 +676,65 @@ li:hover {
 
 /* Extra small devices (Mobile phones, portrait) */
 @media only screen and (max-width: 480px) {
-  .nav-bar {
+  body {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    color: red;
-  }
-  .image-container {
-    width: 100vh;
-  }
-  .main-text {
-    width: 95vh;
-    text-align: center;
+    box-sizing: border-box;
     border: 1px solid red;
   }
+  .nav-bar {
+    width: 100%;
+  }
+  .image-container {
+    width: 100%;
+    border: 5px solid violet;
+  }
+  .main-text {
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    border: 1px solid black;
+  }
   .big-container {
+    width: 100%;
     flex-direction: column;
-    width: 100vh;
+    border: 1px solid green;
+  }
+  .first-container {
+    width: 100%;
+    border: 1px solid red;
+  }
+  .button-div {
+    width: 100%;
+  }
+  .card-button2 {
+    margin-left: 140px;
   }
   .second-container {
-    width: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
   }
   .multi-spans {
     display: inline-block;
-    margin-left: 20px;
-    padding: 5px 12px;
+    margin-left: 5px;
+    font-size: 14px;
+    padding: 5px 8px;
   }
   .card3-para {
-    width: 85vh;
+    width: 100%;
   }
+  .popup-btn {
+    width: 80%;
+    height: 50px;
+    margin: 10px auto;
+    display: block;
+  }
+
   .footer-section {
-    width: 100vh;
+    width: 100%;
+    font-size: 14px;
   }
 }

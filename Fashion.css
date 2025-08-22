@@ -670,3 +670,37 @@ li:hover {
     margin-left: 10%;
   }
 }
+
+/* Extra small devices (Mobile phones, portrait) */
+@media only screen and (max-width: 480px) {
+  .nav-bar {
+    width: 100%;
+    color: red;
+  }
+  .image-container {
+    width: 100vh;
+  }
+  .main-text {
+    width: 95vh;
+    text-align: center;
+    border: 1px solid red;
+  }
+  .big-container {
+    flex-direction: column;
+    width: 100vh;
+  }
+  .second-container {
+    width: 100vh;
+  }
+  .multi-spans {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 5px 12px;
+  }
+  .card3-para {
+    width: 85vh;
+  }
+  .footer-section {
+    width: 100vh;
+  }
+}

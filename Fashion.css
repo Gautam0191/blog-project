@@ -279,18 +279,27 @@ strong {
   font-size: 22px;
 }
 .button-div {
-  margin-top: 15px;
+  display: flex;
+  justify-content: space-between; /*ek left, ek right */
+  gap: 10px; /* bhech main thoda space */
+}
+.button-div button {
+  flex: 1; /* बराबर space लेंगे */
+  max-width: 150px; /* चाहो तो limit कर दो */
+}
+.card-button1,
+.card-button2 {
+  flex: 0 0 auto; /* अपनी जगह लें */
+  cursor: pointer;
 }
 .card-button1 {
-  font-size: 25px;
-  font-family: "Oswald";
-  font-weight: 400;
-  padding: 8px 20px;
-  background-color: white;
-  border: 1px solid gray;
-  margin-top: 30px;
-  margin-left: 30px;
-  cursor: pointer;
+  background: transparent;
+  border: 1px solid lightgray;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+}
+.card-button1 .like-icon {
+  margin-right: 6px;
 }
 .liked {
   color: blue;
@@ -301,16 +310,15 @@ strong {
   border: 1px solid transparent;
 }
 .card-button2 {
-  width: auto;
-  font-size: 25px;
-  margin-left: 560px;
-  padding: 10px 28px;
-  font-family: "Oswald";
+  font-size: 20px;
+  padding: 10px 20px;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
   background-color: black;
   color: white;
-  white-space: nowrap;
   border: none;
+  border-radius: 5px;
+  white-space: nowrap;
 }
 
 .card-button2:hover {
@@ -673,55 +681,115 @@ li:hover {
 }
 
 /* Extra small devices (Mobile phones, portrait) */
-@media only screen and (max-width: 480px) {
-  .image-container {
-    width: 1000px;
+@media (max-width: 480px) {
+  html,
+  body {
+    overflow-x: hidden; /* extra gap हटाने के लिए */
   }
+  .nav-bar {
+    position: absolute; /* image ke right side chipka rahe */
+    top: 350px; /* thoda neeche start ho */
+    right: 0; /* screen ke right edge pe */
+    height: auto; /* height auto */
+    width: 50px; /* chhota width */
+    background: transparent; /* background hata do */
+    flex-direction: column; /* vertical direction */
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: none;
+  }
+
+  .nav-bar a {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 20px;
+    background: transparent;
+  }
+
+  .last-icon {
+    position: static; /* overflow हटाने के लिए */
+  }
+  .text-heading {
+    font-size: 28px;
+  }
+
+  .image-text b {
+    font-size: 16px;
+  }
+
+  .image-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+  /* Main heading */
+  .header-heading {
+    font-size: 36px;
+  }
+  .header-para {
+    font-size: 18px;
+  }
+
+  /* Big Container */
   .big-container {
-    width: 1000px;
-    border: 2px solid red;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
   }
-  .first-container {
-    width: 95%;
-    border: 1px solid green;
-    margin-top: 50px;
-  }
-  .first-container-card1 {
-  }
-  .card-image1 {
-  }
-  .card-text {
-  }
-  .button-div {
-  }
-  /* this code for second card */
-  .or-card-two {
-  }
-  .card-image2 {
-  }
-  /* this style for card 3 */
-  .or-card-three {
-  }
-  .cannse1 {
-  }
-  .cannse2 {
-  }
-  .cannse3 {
-  }
-  /* this style for second contener */
+  .first-container,
   .second-container {
     width: 100%;
-    padding: 0;
+    margin: 0;
+    padding: 10px;
   }
-  .second-container-card1 {
-  }
+
+  /* Images */
+  .deepika1,
+  .card-image1,
+  .card-image2,
+  .cannse1,
+  .cannse2,
+  .cannse3,
   .sc-con-img1 {
+    width: 100%;
+    height: auto;
+    margin: 0;
   }
-  .sec-con-card2 {
+  /* Buttons */
+  .card-button2 {
+    margin-left: 0;
+    width: 100%; /* पूरा mobile screen ले ले */
+    font-size: 18px;
+    padding: 10px;
   }
-  .card-list {
+  .card-button1 {
+    font-size: 18px;
+    padding: 8px 12px;
   }
-  .footer-section {
-    width: 1000px;
+
+  /* Input fields & popup */
+  .input,
+  .button,
+  .popup-input,
+  .popup-btn {
+    width: 100%;
+    margin: 10px 0;
+  }
+  .popup-content {
+    width: 95%;
+    height: auto;
+    margin: 20% auto;
+  }
+
+  /* Footer */
+  .foot-btn {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  .foot-txt {
+    font-size: 18px;
+    margin-left: 10px;
+    text-align: center;
   }
 }

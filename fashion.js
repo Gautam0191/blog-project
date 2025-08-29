@@ -32,3 +32,17 @@ likebtn.forEach(function (icon) {
     icon.classList.toggle("liked");
   });
 });
+// this code for second hide navbar
+const mainNavbar = document.getElementById("mainNavbar");
+const fixedNavbar = document.getElementById("fixedNavbar");
+
+window.addEventListener("scroll", () => {
+  // जब main navbar का bottom viewport top को छू ले
+  const navbarBottom = mainNavbar.getBoundingClientRect().bottom;
+
+  if (navbarBottom <= -5) {
+    fixedNavbar.classList.add("show");
+  } else {
+    fixedNavbar.classList.remove("show");
+  }
+});

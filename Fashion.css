@@ -12,19 +12,45 @@ body {
 .nav-bar {
   width: 100%;
   height: 55px;
-  background-color: rgba(255, 255, 255, 0.326);
-
+  background-color: black;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  position: relative;
+}
+/* Fixed navbar (hidden by default) */
+
+.navbar-fixed {
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.473);
   position: fixed;
   top: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  transform: translateY(-20px);
+  pointer-events: none;
+  /* transition: opacity 0.8s ease transform 0.1s ease; */
   z-index: 1000;
-  box-shadow: inset;
+}
+
+.navbar-fixed a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  padding: 25px 25px;
+  margin-right: 5px;
+}
+.navbar-fixed.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  transition: opacity 0.8s ease, transform 0.8s ease; /* slow enter */
 }
 .nav-bar a {
   text-decoration: none;
-  color: black;
+  color: white;
   font-size: 22px;
   padding: 15px 25px;
   margin-right: 5px;
@@ -625,14 +651,19 @@ li:hover {
   .big-container {
     flex-direction: column;
     width: 100%;
+    padding: 0;
+    
   }
 
   .first-container {
     width: 100%;
-    margin: 20px auto;
+    margin: 0;
+    padding: 0;
   }
   .cardimag1 {
     width: 88%;
+    padding: 0;
+    margin: 0;
   }
   .second-container {
     width: 95%;
@@ -686,17 +717,26 @@ li:hover {
   body {
     overflow-x: hidden; /* extra gap हटाने के लिए */
   }
+  .header-heading {
+    font-size: 80px;
+  }
+  .navbar-fixed {
+    display: none !important;
+  }
+
   .nav-bar {
     position: absolute; /* image ke right side chipka rahe */
     top: 350px; /* thoda neeche start ho */
     right: 0; /* screen ke right edge pe */
-    height: auto; /* height auto */
+    height: 1000px; /* height auto */
     width: 50px; /* chhota width */
     background: transparent; /* background hata do */
     flex-direction: column; /* vertical direction */
     justify-content: flex-start;
     align-items: center;
     box-shadow: none;
+
+    z-index: 999;
   }
 
   .nav-bar a {
@@ -710,7 +750,7 @@ li:hover {
     position: static; /* overflow हटाने के लिए */
   }
   .text-heading {
-    font-size: 28px;
+    font-size: 40px;
   }
 
   .image-text b {
@@ -739,19 +779,37 @@ li:hover {
   .second-container {
     width: 100%;
     margin: 0;
-    padding: 10px;
+  }
+  .or-card-three {
+    padding: 0 !important;
+
+    width: 100%;
   }
 
   /* Images */
   .deepika1,
   .card-image1,
   .card-image2,
-  .cannse1,
-  .cannse2,
-  .cannse3,
   .sc-con-img1 {
     width: 100%;
     height: auto;
+    margin: 0;
+  }
+  .cannse_images {
+    margin-left: 0 !important;
+    margin-top: 30px;
+  }
+  .cannse2,
+  .cannse3 {
+    display: none;
+  }
+  .cannse1 {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    display: block;
+
     margin: 0;
   }
   /* Buttons */
@@ -765,7 +823,21 @@ li:hover {
     font-size: 18px;
     padding: 8px 12px;
   }
-
+  .second-container {
+    margin-top: 50px;
+    padding: 0;
+  }
+  .second-container-card1,
+  .sec-con-card2,
+  .card3 {
+    padding: 0%;
+    width: 100%;
+  }
+  .card3-para {
+    width: 82%;
+    height: 60%;
+    padding: 15px;
+  }
   /* Input fields & popup */
   .input,
   .button,

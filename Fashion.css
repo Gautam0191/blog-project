@@ -648,11 +648,21 @@ li:hover {
 }
 /* this style for responsive layout */
 @media only screen and (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden; /* extra gap हटाने के लिए */
+  }
+  .nav-bar {
+    width: 100%;
+  }
+  .last-icon {
+    position: absolute;
+    left: 90%;
+  }
   .big-container {
     flex-direction: column;
     width: 100%;
     padding: 0;
-    
   }
 
   .first-container {
@@ -667,6 +677,18 @@ li:hover {
   }
   .second-container {
     width: 95%;
+  }
+  .card3-para {
+    width: 90%;
+    height: 62%;
+    margin: 30px;
+  }
+  .card7 {
+  }
+  .input,
+  .button {
+    width: 80%;
+    margin: 15px 50px;
   }
   /* this style for popup message */
   .popup-content {
@@ -735,7 +757,6 @@ li:hover {
     justify-content: flex-start;
     align-items: center;
     box-shadow: none;
-    border: 2px solid red;
 
     z-index: 999;
   }
@@ -832,12 +853,18 @@ li:hover {
   .sec-con-card2,
   .card3 {
     padding: 0%;
+    padding-bottom: 10px;
     width: 100%;
+    height: auto;
+  }
+  .card6-heading,
+  .card3-heading {
+    padding: 10px 20px;
   }
   .card3-para {
-    width: 82%;
-    height: 60%;
-    padding: 15px;
+    width: 100%;
+    height: 100%;
+    padding: 15px 30px;
   }
   /* Input fields & popup */
   .input,

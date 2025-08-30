@@ -726,15 +726,16 @@ li:hover {
 
   .nav-bar {
     position: absolute; /* image ke right side chipka rahe */
-    top: 350px; /* thoda neeche start ho */
+    top: 300px; /* thoda neeche start ho */
     right: 0; /* screen ke right edge pe */
-    height: 1000px; /* height auto */
+    height: auto; /* height auto */
     width: 50px; /* chhota width */
     background: transparent; /* background hata do */
     flex-direction: column; /* vertical direction */
     justify-content: flex-start;
     align-items: center;
     box-shadow: none;
+    border: 2px solid red;
 
     z-index: 999;
   }
@@ -843,8 +844,8 @@ li:hover {
   .button,
   .popup-input,
   .popup-btn {
-    width: 100%;
-    margin: 10px 0;
+    width: 90%;
+    margin: 10px 20px;
   }
   .popup-content {
     width: 95%;
@@ -855,9 +856,9 @@ li:hover {
   /* Footer */
   .foot-btn {
     width: 100%;
-    height: auto;
+    height: 20%;
     font-size: 18px;
-    margin: 10px 0;
+    margin: 0;
   }
   .foot-txt {
     font-size: 18px;
